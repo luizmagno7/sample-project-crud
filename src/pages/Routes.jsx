@@ -1,15 +1,22 @@
-import { lazy } from 'react';
+import { lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import UserContext from '../contexts/userContext';
 
 const Home = lazy(() => import('./Home'));
-
-console.info(Home);
+const Users = lazy(() => import('./Users'));
 
 function App() {
+  const [ userList, setUserList ] = useState([]);  
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <UserContext.Provider value={ { userList, setUserList } }>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/users" element={<Users />} />
+
+        <Route path='*' element={<h1>404</h1>} />
+      </Routes>
+    </UserContext.Provider>
   );
 }
 
