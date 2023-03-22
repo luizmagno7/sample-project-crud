@@ -1,10 +1,6 @@
 import styles from './Loading.module.scss'
 
-interface LoadingProps {
-    loadingText?: string;
-}
-
-const Loading = ({ loadingText }: LoadingProps) => {
+const Loading = ({ loadingText }) => {
     return (
         <div className={styles.container}>
             <i className={styles.icon}></i>
