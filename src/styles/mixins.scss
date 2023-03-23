@@ -1,0 +1,38 @@
+$grid-breakpoints: (
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+// Create a media mixin for each breakpoint
+@mixin media-sm {
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (max-width: map-get($grid-breakpoints, md)) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media (max-width: map-get($grid-breakpoints, xl)) {
+        @content;
+    }
+}
+
+@mixin media-xxl {
+    @media (max-width: map-get($grid-breakpoints, xxl)) {
+        @content;
+    }
+}
