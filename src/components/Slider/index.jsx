@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import image1 from "../../assets/animal1.jpg"
-import image2 from "../../assets/animal2.jpg"
-import image3 from "../../assets/animal3.jpg"
+import image1 from "../../assets/img1.jpg"
+import image2 from "../../assets/img2.jpg"
+import image3 from "../../assets/img3.jpg"
 import styles from "./Slider.module.scss"
 
 export default class SimpleSlider extends Component {
@@ -16,7 +16,7 @@ export default class SimpleSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 4000,
+      autoplaySpeed: 3500,
       pauseOnHover: true
     };
     return (
