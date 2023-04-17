@@ -19,9 +19,9 @@ function Header() {
                 <button className={styles.btnMenu} onClick={() => {setIsActiveMenu(!isActiveMenu)}}><AiOutlineMenu/></button>
                 <nav className={`${styles.menu} ${isActiveMenu ? styles.active: ""}`}>
                     <ul>
-                        <li><a><Link to="/">Home</Link></a></li>
-                        <li><a><Link to="/users">Users</Link></a></li>
-                        <li><a><Link to="/">Contact</Link></a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/users">Users</Link></li>
+                        <li><Link to="/">Contact</Link></li>
                     </ul>   
                 </nav>
             </div>
